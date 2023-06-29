@@ -1,3 +1,8 @@
-#favicon>h1{border:4px solid purple;padding:20px}
-
-/*# sourceMappingURL=main.css.map*/
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+#favicon > h1 {
+  border: 4px solid purple;
+  padding: 20px;
+  font-family: sans-serif;
+}
