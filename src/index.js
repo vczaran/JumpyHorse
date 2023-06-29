@@ -1,7 +1,11 @@
-// import JumpyHorse from './game';
+import Game from './scripts/game';
 
 document.addEventListener("DOMContentLoaded", () => {
-   
     const canvas = document.getElementById('background');
-    new JumpyHorse(canvas);
+    // window.addEventListener ( "keydown", (e) => {
+    //     if (e.code === "Space") {
+    //         this.jump();
+    //     };
+    // })
+    new Game(canvas);
 })
