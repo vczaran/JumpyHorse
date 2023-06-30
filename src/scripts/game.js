@@ -7,9 +7,9 @@ export default class Game {
         this.dimensions = { width: canvas.width, height: canvas.height };
         const horse = new Horse(0, 250);
         // new Obstacle(900, 360)
-        // setInterval ( () => {
-        //     new Obstacle(900, 360)}, 10000
-        // );
+        setInterval ( () => {
+            new Obstacle(900, 360)}, 7000
+        );
       
         window.addEventListener ( "keydown", (e) => {
             if (e.code === "Space") {

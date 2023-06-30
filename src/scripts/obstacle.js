@@ -3,7 +3,7 @@ export default class Obstacle {
     constructor (x, y) {
         this.x = x;
         this.y = y;
-        this.speedX = 2;
+        this.speedX = 3;
         this.width = 900;
         this.height = 450;
         this.drawObstacle();
@@ -23,6 +23,12 @@ export default class Obstacle {
             this.x -= this.speedX;
             this.drawObstacle();
         })
+    }
+
+    speedUp () {
+        if (score % 5 === 0) {
+            this.speedX += 1;
+        }
     }
 
 }
