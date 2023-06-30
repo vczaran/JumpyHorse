@@ -6,23 +6,23 @@ export default class Obstacle {
         this.speedX = 3;
         this.width = 900;
         this.height = 450;
-        this.drawObstacle();
+        // this.drawObstacle();
     }
 
     drawObstacle() {
         const canvas = document.getElementById("background");
         const ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, this.width, this.height);
+        // ctx.clearRect(0, 0, this.width, this.height);
         ctx.fillStyle = "yellow";
         ctx.fillRect(this.x, this.y, 20, 60);
         this.moveObstacle();
     }
 
     moveObstacle () {
-        requestAnimationFrame ( () => {
+        // requestAnimationFrame ( () => {
             this.x -= this.speedX;
-            this.drawObstacle();
-        })
+            // this.drawObstacle();
+        // })
     }
 
     speedUp () {

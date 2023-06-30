@@ -8,20 +8,33 @@ export default class Horse {
         this.width = 900;
         this.height = 450;
 
+        this.horse1 = document.getElementById("horse1");
+
     }
 
     drawHorse () {
         const canvas = document.getElementById("background");
         const ctx = canvas.getContext("2d");
-        ctx.clearRect(0, 0, this.width, this.height);
-        const horse1 = document.getElementById("horse1");
-        if (this.y > 250) this.y = 250;
-        ctx.drawImage(horse1, this.x, this.y, 300, 300);
+        // ctx.clearRect(0, 0, this.width, this.height);
+        
+        ctx.drawImage(this.horse1, this.x, this.y, 300, 300);
+        this.move();
+        if (this.y > 250) {
+            this.y = 250;
+        }
+    }
+
+    move () {
+        this.y += this.speedY;
+        this.speedY += this.gravity;
     }
 
     jump () {
-        this.speedY += -10;
-        this.y += this.speedY;
+        this.speedY = -10;
+        
+        // requestAnimationFrame( () => {
+        //     this.jump();
+        // })
         // console.log(this.y);
     }
 
