@@ -1,7 +1,6 @@
 export default class Horse {
     constructor (x, y) {
         this.gravity = 0.3;
-        this.gravitySpeed = 0;
         this.x = x;
         this.y = y;
         this.speedX = 0;
@@ -11,20 +10,16 @@ export default class Horse {
 
         this.fall = function () {
             if (this.y < 250) {
-            this.gravitySpeed += this.gravity;
-            this.y += this.speedY + this.gravitySpeed;
+            this.speedY += this.gravity;
+            this.y += this.speedY;
             this.drawHorse();
             requestAnimationFrame ( () => {
                 this.fall();
             })
-        } else {
-            this.y = 250;
+        // } else {
+        //     this.y = 250;
         }
         }
-
-        requestAnimationFrame ( () => {
-            this.fall();
-        })
     }
 
     drawHorse () {
@@ -35,9 +30,9 @@ export default class Horse {
         ctx.drawImage(horse1, this.x, this.y, 300, 300);
     }
 
-
-    // jump () {
-    //     this.y += 100;
-    // }
-
+    jump () {
+        this.speedY += -10;
+        this.y += this.speedY;
+        console.log(this.y);
+    }
 }
