@@ -1,28 +1,24 @@
 export default class Obstacle {
 
-    constructor (x, y) {
+    constructor (x, y, width, height) {
         this.x = x;
         this.y = y;
-        this.speedX = 3;
-        this.width = 900;
-        this.height = 450;
-        // this.drawObstacle();
+        this.speedX = 2;
+        this.width = width;
+        this.height = height;
     }
 
     drawObstacle() {
         const canvas = document.getElementById("background");
         const ctx = canvas.getContext("2d");
-        // ctx.clearRect(0, 0, this.width, this.height);
         ctx.fillStyle = "yellow";
-        ctx.fillRect(this.x, this.y, 20, 60);
+        ctx.fillRect(this.x, this.y, this.width, this.height);
         this.moveObstacle();
     }
 
     moveObstacle () {
-        // requestAnimationFrame ( () => {
             this.x -= this.speedX;
-            // this.drawObstacle();
-        // })
+            // console.log(this.x);
     }
 
     speedUp () {
@@ -30,5 +26,16 @@ export default class Obstacle {
             this.speedX += 1;
         }
     }
+
+    drawScore() {
+        this.x = 100;
+        this.y = 10;
+        this.ctx.font = "bold 50pt serif";
+        this.ctx.fillStyle = "white";
+        this.ctx.fillText(this.score, loc.x, loc.y);
+        this.ctx.strokeStyle = "black";
+        this.ctx.lineWidth = 2;
+        this.ctx.strokeText(this.score, loc.x, loc.y);
+      }
 
 }
