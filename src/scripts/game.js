@@ -1,5 +1,6 @@
 import View from "./view";
 
+
 export default class Game {
     constructor(canvas) {
         this.ctx = canvas.getContext("2d");

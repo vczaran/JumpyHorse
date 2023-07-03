@@ -80,7 +80,7 @@ export default class View {
         const ctx = canvas.getContext("2d");
         this.x = 435;
         this.y = 50;
-        ctx.font = "bold 40pt serif";
+        ctx.font = "40pt serif";
         ctx.fillStyle = "black";
         ctx.fillText(this.score, this.x, this.y);
       }

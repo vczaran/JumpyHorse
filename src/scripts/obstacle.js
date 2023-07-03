@@ -21,11 +21,11 @@ export default class Obstacle {
             // console.log(this.x);
     }
 
-    speedUp () {
-        if (score % 5 === 0) {
-            this.speedX += 1;
-        }
-    }
+    // speedUp () {
+    //     if (score % 5 === 0) {
+    //         this.speedX += 1;
+    //     }
+    // }
 
 
 }

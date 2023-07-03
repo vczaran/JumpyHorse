@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const game = new Game(canvas);
     // const view = new View(canvas);
     const start = document.getElementById("start-button");
-    start.onclick = function () {game.startGame(game.view)};
+    start.onclick = function () {
+        game.startGame(game.view);
+        start.classList.toggle("hide")};
     // new View(canvas);
     // const view = new View(canvas);
     // new Game(view);
