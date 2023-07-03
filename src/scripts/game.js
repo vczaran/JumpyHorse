@@ -6,7 +6,7 @@ export default class Game {
         this.dimensions = { width: canvas.width, height: canvas.height };
         this.view = new View(canvas);
         // const start = document.getElementById("start-button");
-        this.startGame(this.view);
+        // this.startGame(this.view);
         // start.onclick = function () {this.startGame(view)};
     }
 
@@ -20,7 +20,7 @@ export default class Game {
     gameOver() {
         if (this.view.collision === true) {
         alert("Game Over!");
-        // this.running = false;
+        clearInterval(this.view.intervalID);
         }
     }
 

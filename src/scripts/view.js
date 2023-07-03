@@ -63,8 +63,8 @@ export default class View {
             && ((horse.y + horse.height) >= obs.y)
             && (horse.y + horse.height >= obs.y - obs.height))
               {console.log(true)}
+                // alert("Game Over!")}
                 // this.collision = true}
-                // alert("Game Over!")};
                 else {this.scoreUp()};
     }
 

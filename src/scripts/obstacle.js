@@ -27,15 +27,5 @@ export default class Obstacle {
         }
     }
 
-    drawScore() {
-        this.x = 100;
-        this.y = 10;
-        this.ctx.font = "bold 50pt serif";
-        this.ctx.fillStyle = "white";
-        this.ctx.fillText(this.score, loc.x, loc.y);
-        this.ctx.strokeStyle = "black";
-        this.ctx.lineWidth = 2;
-        this.ctx.strokeText(this.score, loc.x, loc.y);
-      }
 
 }
