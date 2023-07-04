@@ -68,7 +68,7 @@ export default class View {
         this.x = 435;
         this.y = 50;
         ctx.font = "40pt serif";
-        ctx.fillStyle = "black";
+        ctx.fillStyle = "white";
         ctx.fillText(this.score, this.x, this.y);
       }
 
@@ -76,12 +76,17 @@ export default class View {
     gameOver() {
         this.over = true;
         clearInterval(this.intervalID);
+        const canvas = document.getElementById("background");
+        const ctx = canvas.getContext("2d");
         const endModal = document.getElementById("endModal");
         endModal.style.display = "block";
-        // const start = document.getElementById("start-button");
-        // start.onclick = function () {
-        //     game.startGame();
-        //     endModal.style.display = "none";
-        // };
+        const start = document.getElementById("start-button");
+        start.onclick = function () {
+            debugger
+            this.over = false;
+            // const view = new View(canvas);
+            // view.draw(ctx);
+            endModal.style.display = "none";
+        };
         }
     }

@@ -36,7 +36,7 @@ body {
   z-index: 1;
   margin-top: 175px;
   width: 30%;
-  height: 30%;
+  height: 32%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -47,8 +47,8 @@ body {
 .start-modal-content {
   background-color: transparent;
   text-align: center;
-  padding: 20px;
   font-family: "PixelSans";
+  font-size: 30px;
   color: white;
 }
 
@@ -58,7 +58,7 @@ body {
   z-index: 1;
   margin-top: 175px;
   width: 30%;
-  height: 30%;
+  height: 32%;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -69,6 +69,8 @@ body {
 .end-modal-content {
   background-color: transparent;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
+  font-family: "PixelSans";
+  font-size: 30px;
   color: white;
 }
