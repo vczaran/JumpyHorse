@@ -9,5 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     start.onclick = function () {
         game.startGame(game.view);
         startModal.style.display = "none";
+        // const audio = document.getElementById("gallop");
+        // audio.play();
     };
 })
