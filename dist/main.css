@@ -1,10 +1,6 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-* {
-  background-color: darkgreen;
-}
-
 .logo {
   width: 200px;
   height: 100px;
@@ -28,4 +24,24 @@ body {
 
 #start-button {
   background-color: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  margin-top: 150px;
+  width: 30%;
+  height: 30%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: transparent;
+  text-align: center;
+  padding: 20px;
 }

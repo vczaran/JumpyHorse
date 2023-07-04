@@ -18,7 +18,6 @@ export default class Obstacle {
 
     moveObstacle () {
             this.x -= this.speedX;
-            // console.log(this.x);
     }
 
     // speedUp () {
