@@ -6,7 +6,7 @@ import Background from "./background";
 export default class View {
 
     constructor (canvas) {
-    //     this.audio = document.getElementById("gallop");
+        this.audio = document.getElementById("gallop");
 
     //     const mute = document.getElementById("mute");
     //     let toggle = true;
@@ -45,7 +45,7 @@ export default class View {
 
     draw(ctx) {
        if (!this.over) { 
-        // this.audio.play();
+        this.audio.play();
         ctx.clearRect(0, 0, this.dimensions.width, this.dimensions.height);
         this.bg.drawBackground();
         this.horse.drawHorse();
@@ -96,7 +96,7 @@ export default class View {
 
 
     gameOver() {
-        // this.audio.pause();
+        this.audio.pause();
         this.over = true;
         clearInterval(this.intervalID);
         const canvas = document.getElementById("background");
