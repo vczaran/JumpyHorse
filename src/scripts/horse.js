@@ -9,6 +9,13 @@ export default class Horse {
         this.height = height;
 
         this.runhorse1 = document.getElementById("runhorse1");
+        // this.horses = document.getElementById("running-horse").children;
+
+        // let i = 0;
+        // setInterval(function () { 
+        //     horses[i % this.horses.length].style.display = "none";
+        //     horses[++i % this.horses.length].style.display = "block";
+        // }, 100);
 
     }
 
@@ -21,7 +28,7 @@ export default class Horse {
         this.move();
         if (this.y > 360) {
             this.y = 360;
-        }
+        };
     }
 
     move () {

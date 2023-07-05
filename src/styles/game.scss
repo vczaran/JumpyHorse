@@ -12,6 +12,13 @@
     height: 100px;
 }
 
+// #running-horse img {
+//   display: none;
+// }
+// #running-horse img:first-child {
+//   display: block;
+// }
+
 body {
     display: flex;
     flex-direction: column;
@@ -20,8 +27,8 @@ body {
 }
 
 #background {
-    background-image: url("../images/farm.png");
-    background-size: 100%;
+    background-image: url("../images/longfarm.png");
+    background-size: 425%;
 }
 
 .hide {
@@ -53,7 +60,6 @@ body {
   .start-modal-content {
     background-color: transparent;
     text-align: center;
-    // padding: 10px;
     font-family: "PixelSans";
     font-size: 30px;
     color: white;

@@ -1,5 +1,6 @@
 import Horse from "./horse";
 import Obstacle from "./obstacle";
+import Background from "./background";
 
 
 export default class View {
@@ -7,6 +8,7 @@ export default class View {
     constructor (canvas) {
         this.over = false;
         this.dimensions = { width: canvas.width, height: canvas.height };
+        this.bg = new Background();
         this.score = 0;
         this.horse = new Horse(20, 360, 100, 70);
         this.obstacles = [new Obstacle(900, 360, 20, 60)];
@@ -25,15 +27,17 @@ export default class View {
 
     }
 
+
     draw(ctx) {
        if (!this.over) { 
         ctx.clearRect(0, 0, this.dimensions.width, this.dimensions.height);
+        this.bg.drawBackground();
         this.horse.drawHorse();
         this.obstacles.forEach(obs => {
             obs.drawObstacle();
         });
         this.drawScore();
-
+        
         requestAnimationFrame(() => {
             this.draw(ctx);
             this.collision();
@@ -82,7 +86,6 @@ export default class View {
         endModal.style.display = "block";
         const restart = document.getElementById("restart-button");
         restart.onclick = function () {
-            // debugger
             this.over = false;
             const view = new View(canvas);
             view.draw(ctx);
