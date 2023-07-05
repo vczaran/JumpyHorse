@@ -10,6 +10,10 @@
   height: 100px;
 }
 
+#running-horse img {
+  display: none;
+}
+
 body {
   display: flex;
   flex-direction: column;

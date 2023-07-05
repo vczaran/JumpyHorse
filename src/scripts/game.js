@@ -12,19 +12,4 @@ export default class Game {
          view.draw(this.ctx);
     }
 
-    // gameOver() {
-    //     if (this.view.collision() === true) {
-    //     this.over = true;
-    //     clearInterval(this.intervalID);
-    //     const endModal = document.getElementById("endModal");
-    //     endModal.style.display = "block";
-    //     // const start = document.getElementById("start-button");
-    //     // start.onclick = function () {
-    //     //     game.startGame();
-    //     //     endModal.style.display = "none";
-    //     // };
-    //     }
-    // }
-
-
 }

@@ -1,6 +1,3 @@
-// * {
-//     background-color: darkgreen;
-// }
 
 @font-face {
   font-family: "PixelSans";
@@ -12,12 +9,9 @@
     height: 100px;
 }
 
-// #running-horse img {
-//   display: none;
-// }
-// #running-horse img:first-child {
-//   display: block;
-// }
+#running-horse img {
+  display: none;
+}
 
 body {
     display: flex;

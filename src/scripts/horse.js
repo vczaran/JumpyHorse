@@ -7,24 +7,26 @@ export default class Horse {
         this.speedY = 0;
         this.width = width;
         this.height = height;
-
-        this.runhorse1 = document.getElementById("runhorse1");
-        // this.horses = document.getElementById("running-horse").children;
-
-        // let i = 0;
-        // setInterval(function () { 
-        //     horses[i % this.horses.length].style.display = "none";
-        //     horses[++i % this.horses.length].style.display = "block";
-        // }, 100);
+        this.counter = 0;
+        this.frameIndex = 0;
+        this.horses = document.getElementById("running-horse").children;
 
     }
 
     drawHorse () {
         const canvas = document.getElementById("background");
         const ctx = canvas.getContext("2d");
-        // ctx.fillStyle = "brown";
-        // ctx.fillRect(this.x, this.y, this.width, this.height);
-        ctx.drawImage(this.runhorse1, this.x, this.y, this.width, this.height);
+        this.counter += 1;
+
+        if (this.counter % 7 === 0) {
+            this.frameIndex += 1;
+            if (this.frameIndex === 5) {
+                this.frameIndex = 0;
+            };
+        };
+
+        ctx.drawImage(this.horses[this.frameIndex], this.x, this.y, this.width, this.height);
+    
         this.move();
         if (this.y > 360) {
             this.y = 360;

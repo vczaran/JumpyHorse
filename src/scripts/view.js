@@ -33,9 +33,11 @@ export default class View {
         ctx.clearRect(0, 0, this.dimensions.width, this.dimensions.height);
         this.bg.drawBackground();
         this.horse.drawHorse();
+    
         this.obstacles.forEach(obs => {
             obs.drawObstacle();
         });
+
         this.drawScore();
         
         requestAnimationFrame(() => {
@@ -56,9 +58,9 @@ export default class View {
             && ((obs.x + obs.width) < (horse.x + horse.width))
             && (horse.y + horse.height >= obs.y)
             && (horse.y + horse.height >= obs.y - obs.height))
-            {this.gameOver()}
-            // {return true}
-                else {this.scoreUp()};
+                {this.gameOver()}
+                    else 
+                {this.scoreUp()};
     }
 
     scoreUp () {
