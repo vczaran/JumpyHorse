@@ -18,7 +18,7 @@ export default class Horse {
         const ctx = canvas.getContext("2d");
         this.counter += 1;
 
-        if (this.counter % 7 === 0) {
+        if (this.counter % 6 === 0) {
             this.frameIndex += 1;
             if (this.frameIndex === 5) {
                 this.frameIndex = 0;
