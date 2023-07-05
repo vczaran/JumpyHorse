@@ -66,8 +66,8 @@ export default class View {
         const canvas = document.getElementById("background");
         const ctx = canvas.getContext("2d");
         this.x = 435;
-        this.y = 50;
-        ctx.font = "40pt serif";
+        this.y = 60;
+        ctx.font = "40pt PixelSans";
         ctx.fillStyle = "white";
         ctx.fillText(this.score, this.x, this.y);
       }
@@ -80,12 +80,12 @@ export default class View {
         const ctx = canvas.getContext("2d");
         const endModal = document.getElementById("endModal");
         endModal.style.display = "block";
-        const start = document.getElementById("start-button");
-        start.onclick = function () {
-            debugger
+        const restart = document.getElementById("restart-button");
+        restart.onclick = function () {
+            // debugger
             this.over = false;
-            // const view = new View(canvas);
-            // view.draw(ctx);
+            const view = new View(canvas);
+            view.draw(ctx);
             endModal.style.display = "none";
         };
         }
