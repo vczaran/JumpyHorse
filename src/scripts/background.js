@@ -2,7 +2,8 @@
    export default class Background {
    constructor () {
         this.bg = new Image();
-        this.bg.src = "../../images/longfarm.png";
+        // this.bg.src = "../../images/longfarm.png";
+        this.bg.src = "https://github.com/vczaran/JumpyHorse/blob/main/images/longfarm.png"
         this.x = 0;
     }
 
