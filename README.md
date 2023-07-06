@@ -4,7 +4,7 @@
 
 <img src="./assets/images/game.gif" alt="JumpyHorse GIF" width="600" height="400">
 
-# Functionality 
+# Functionality: 
 
 * Canvas drawing and movement of obstacles, background, and horse sprite is accomplished by compiling all individual draw functions from the different classes into one universal draw function to ensure all Canvas elements are drawn simultaneously every frame.
 
@@ -20,32 +20,43 @@
 
 <img src="./assets/images/animate.png" alt="collision" width="600" height="400">
 
-# Technologies, Libraries, APIs
+# Technologies, Libraries, APIs:
 
-Canvas API
+* Canvas API
 
-HTML
+* HTML
 
-CSS
+* CSS
 
-Webpack and Babel
+* Webpack and Babel
 
-npm
+* npm
 
-**Implementation Timeline:**
+# Future Bonus Features:
 
-Friday & Weekend: Get Canvas set up and rendering background and horse object. Research how to animate background and horse with Canvas. If possible, begin to animate background and horse.
-
-Monday: Get horse running and background moving if not done already. Start adding obstacles and researching collision logic and handling.
-
-Tuesday: Add gravity functionality and jump controls. Finalize collision handling.
-
-Wednesday: Add styling and music/sound effects.
-
-Thursday Morning: Final touches, update ReadME.
-
-**Bonus Features:**
-
-Change in environment every 25 jumps - background, music, and obstacles will change accordingly. Default initial style will be a farm and will transition to spooky forest then city and finally beach. 
+Obstacle width and height will vary and be randomized. Obstacle appearance will also be varied and random. The speed of the game will increase every 5 jumps. Local high score will be stored and displayed on the upper right hand corner of the screen. Additional music aside from gallop sound effects. Horse animation and sound effects will pause while jumping. The game is won after clearing 100 jumps. Every 25 jumps the theme will change - background, music, and obstacles will change accordingly. Default initial style will be a farm and will transition to spooky forest, then city, and finally beach. 
 
 Horse styles willl be unlockable based on game progress - each will have different stats (such as increased jump height and/or speed). The final unlock, upon completion of the game, will be a pegasus that can fly over obstacles.
+
+
+# Implementation Timeline:
+
+* Thursday & Friday: Basic styling and rendering of all canvas elements completed. Added gravity functionality. Added logo. Added moving obstacles and jump on keypress functionality.
+
+* Weekend: Implemented collision detection and start game/game over logic.
+
+* Monday: Fine tuned collision detection and start game/game over logic.
+
+* Tuesday: Added instruction/start and end game modals with start/restart game functionality.
+
+* Wednesday: Background movement and horse sprite animation implemented. Added gallop sound effects.
+
+* Thursday Morning: Added production ReadME.
+
+
+# Art Credits:
+
+* Logo and additional background design by Alexandra Czaran (https://www.linkedin.com/in/aczaran1999/)
+* Initial barnyard background by kaleb-silva
+* Horse sprite art by alizard of opengameart.org
+* Pixeloid font sourced from fontspace.com (created by GGBotNet)
