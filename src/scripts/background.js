@@ -2,7 +2,11 @@
    export default class Background {
    constructor () {
         this.bg = new Image();
-        this.bg.src = "/assets/images/longfarm.png";
+        if (process.env.NODE_ENV === 'development') {
+            this.bg.src = "/assets/images/longfarm.png";
+        } else if (process.env.NODE_ENV === 'production') {
+            this.bg.src = "/JumpyHorse/assets/images/longfarm.png";
+        }
         this.x = 0;
     }
 
