@@ -1,35 +1,28 @@
 # JumpyHorse
 
-Jumpy Horse is an 8bit, retro style game in which the user navigates an equine avatar over obstacles of varying width and height. The speed and difficulty will gradually increase. Players will be able to unlock horses with special attributes based on progress (see Bonus Features). Score will increment with every jump. There are 100 jumps in total. Players who wish to mute the sound effects and in-game music may do so by toggling the mute button.
+<a href= "https://vczaran.github.io/JumpyHorse/">Jumpy Horse</a> is an 8bit, retro style game in which the user navigates an equine avatar over obstacles. Colliding with an obstacle will end the game. Jumping is accomplished by pressing the spacebar. Start modal includes game instructions and start button that begins the game. End modal pops up upon collision and includes a button to restart the game. Galloping sound effects play during the game and end on game over. 
 
-**Functionality & MVPs:**
+<img src="./assets/images/game.gif" alt="JumpyHorse GIF" width="500" height="600">
 
-In Jumpy Horse, users will be able to:
+# Functionality 
 
-Control an equine avatar to navigate over obstacles of varying width and height 
-Choose and unlock different horse styles
-Keep track of their current socre
-Keep track of a local high score
-Enjoy nostalgic pixelated backgrounds and animation
+* Canvas drawing and movement of obstacles, background, and horse sprite is accomplished by compiling all individual draw functions from the different classes into one universal draw function to ensure all Canvas elements are drawn simultaneously every frame.
+
+<img src="./assets/images/draw.png" alt="draw" width="500" height="600">
 
 
-In addition, this project will include:
+* Obstacles are created and immediately stored in an array on loop and shifted from the array when going off screen, thus only one obstacle is within the array at a time. Collision detection is therefore used to check for collisions between the first element in the obstacles array and the horse sprite by checking if the range of x and y coordinates of either object overlaps. Game over function is called when a collision is detected. If no collision is detected, the score increments. 
 
-An About modal describing the background and rules of the game
-A production README
-
-
-**Wireframe:**
+<img src="./assets/images/collision.png" alt="collision" width="500" height="600">
 
 
-<img width="692" alt="Screenshot 2023-06-28 at 5 07 59 PM" src="https://github.com/vczaran/JumpyHorse/assets/131270949/7dbf46a0-6c45-44ed-9937-df90983af6eb">
+* Horse sprite animation is achieved by cycling through 5 different images of the same size every 6 frames. The drawHorse function is called every frame, hence the counter attribute will increment with every frame. Horse sprite images are stored in an HTML div tag and accessed by accessing the children of that tag.
 
+<img src="./assets/images/animate.png" alt="collision" width="500" height="600">
 
-**Technologies, Libraries, APIs:**
+# Technologies, Libraries, APIs
 
 Canvas API
-
-Keyboard API
 
 HTML
 

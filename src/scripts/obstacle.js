@@ -4,7 +4,7 @@ export default class Obstacle {
     constructor (x, y, width, height) {
         this.x = x;
         this.y = y;
-        this.speedX = 2;
+        this.speedX = 3;
         this.width = width;
         this.height = height;
 
