@@ -7,18 +7,6 @@ export default class View {
 
     constructor (canvas) {
         this.audio = document.getElementById("gallop");
-
-    //     const mute = document.getElementById("mute");
-    //     let toggle = true;
-    //     mute.addEventListener("click", () => {
-    //          toggle = !toggle;
-    //          if (!toggle) {
-    //             this.audio.play();
-    //          } else {
-    //              this.audio.pause();
-    //          }
-    //   });
-
         this.over = false;
         this.dimensions = { width: canvas.width, height: canvas.height };
         this.bg = new Background();
@@ -43,7 +31,16 @@ export default class View {
 
     draw(ctx) {
        if (!this.over) { 
-        this.audio.play();
+        const mute = document.getElementById("mute");
+        let toggle = true;
+        mute.addEventListener("click", () => {
+             toggle = !toggle;
+             if (!toggle) {
+                this.audio.play();
+             } else {
+                 this.audio.pause();
+             }
+      });
         ctx.clearRect(0, 0, this.dimensions.width, this.dimensions.height);
         this.bg.drawBackground();
         this.horse.drawHorse();
