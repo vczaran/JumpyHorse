@@ -2,7 +2,7 @@
    export default class Background {
    constructor () {
         this.bg = new Image();
-        this.bg.src = "../../assets/images/longfarm.png";
+        this.bg.src = "/assets/images/longfarm.png";
         this.x = 0;
     }
 
