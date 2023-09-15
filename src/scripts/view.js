@@ -12,11 +12,11 @@ export default class View {
         this.bg = new Background();
         this.score = 0;
         this.horse = new Horse(20, 360, 100, 70);
-        this.obstacles = [];
+        this.obstacles = [new Obstacle(900, 360, 30, 70)];
         this.intervalID = setInterval ( () => {
             this.obstacles.push(new Obstacle(900, 360, 30, 70));
             if (this.obstacles[0].x <= 0) {
-                this.obstacles.slice(1);
+                this.obstacles.shift();
             }
         }, 7000);
 
